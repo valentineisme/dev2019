@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>SMOT</title>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"/>
+</head>
+{% include 'menu.html' %}
+
+<body class="meio_inicio">
+    <div class="bloco_inicio">
+        {% block body_block %}
+            Bem vindo a essa aplicação<br>
+
+            {% if form %}
+                Cadastrao realizado com sucesso, faça login <a class="item" href="#">aqui</a>
+            {% endif %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>
